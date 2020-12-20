@@ -18,14 +18,15 @@ class Block {
 
     mine(difficulty, timestamp) {
         while (parseInt(this.hash, 16) > Math.pow(16, 64 - this.difficulty)) {
-            this.difficulty = Block.adjustDifficulty(difficulty, timestamp)
-            this.hash = this.calculateHash()
+            this.timestamp = Date.now()
+            this.difficulty = Block.adjustDifficulty(difficulty, timestamp, this.timestamp)
             this.nonce++
+            this.hash = this.calculateHash()
         }
     }
 
-    static adjustDifficulty(difficulty, timestamp) {
-        return (timestamp + BLOCKTIME) > Date.now() ? (difficulty + 1) : (difficulty - 1)
+    static adjustDifficulty(difficulty, timestamp, newTimestamp) {
+        return (timestamp + BLOCKTIME) > newTimestamp ? (difficulty + 1) : (difficulty - 1)
     }
 
     toString() {
