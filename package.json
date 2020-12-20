@@ -1,0 +1,27 @@
+{
+  "name": "blockchain-learning",
+  "version": "1.0.0",
+  "description": "Blockchain learning for DGM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieungoc0206/blockchain-learning.git"
+  },
+  "keywords": [
+    "blockchain"
+  ],
+  "author": "hieungoc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hieungoc0206/blockchain-learning/issues"
+  },
+  "homepage": "https://github.com/hieungoc0206/blockchain-learning#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "crypto-js": "^4.0.0",
+    "express": "^4.17.1"
+  }
+}
